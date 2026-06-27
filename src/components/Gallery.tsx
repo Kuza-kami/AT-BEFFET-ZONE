@@ -3,6 +3,11 @@ import { motion } from "motion/react";
 import { Image } from "lucide-react";
 import { StaggeredText } from "./StaggeredText";
 
+// Import local images as ES modules to let Vite resolve public paths in production
+import interiorImg from "../assets/images/buffet_restaurant_interior_1782462273318.jpg";
+import spreadImg from "../assets/images/buffet_traditional_food_spread_1782462290415.jpg";
+import diningImg from "../assets/images/buffet_dining_table_1782462305976.jpg";
+
 export function GallerySkeleton() {
   return (
     <div className="border-2 border-[#111111] rounded-md bg-white p-2 shadow-[4px_4px_0px_0px_rgba(17,17,17,1)] animate-pulse flex flex-col">
@@ -57,7 +62,7 @@ export function Gallery() {
           ))
         ) : (
           <>
-            <motion.div 
+             <motion.div 
               initial={{ opacity: 0, y: 30, scale: 0.95 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true, margin: "-50px" }}
@@ -69,7 +74,7 @@ export function Gallery() {
                 <motion.img
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.4 }}
-                  src="/src/assets/images/buffet_restaurant_interior_1782462273318.jpg"
+                  src={interiorImg}
                   alt="Bustling restaurant interior"
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
@@ -92,7 +97,7 @@ export function Gallery() {
                 <motion.img
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.4 }}
-                  src="/src/assets/images/buffet_traditional_food_spread_1782462290415.jpg"
+                  src={spreadImg}
                   alt="Traditional food spread"
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
@@ -115,7 +120,7 @@ export function Gallery() {
                 <motion.img
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.4 }}
-                  src="/src/assets/images/buffet_dining_table_1782462305976.jpg"
+                  src={diningImg}
                   alt="Beautiful dining table setup"
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"

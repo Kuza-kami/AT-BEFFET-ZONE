@@ -5,6 +5,15 @@ import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+// Import local images and video as ES Modules to resolve correctly in production builds
+import chairImg from "../assets/images/arch-dining-chair-black-d575fc5ab556b8a4161a6a716397a436.jpg";
+import braaiMeatImg from "../assets/images/braai_meat_1782499481725.jpg";
+import papChakalakaImg from "../assets/images/pap_chakalaka_1782499501801.jpg";
+import mogoduTripeImg from "../assets/images/mogodu_tripe_1782499516640.jpg";
+import oxtailStewImg from "../assets/images/oxtail_stew_1782499528034.jpg";
+import traditionalSpreadImg from "../assets/images/buffet_traditional_food_spread_1782462290415.jpg";
+import heroVideo from "../assets/images/8477270-hd_1920_1080_24fps.mp4";
+
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 import { StaggeredText } from "./StaggeredText";
 import { FoodCard } from "./FoodCard";
@@ -157,7 +166,7 @@ export function Home({
         <div className="absolute inset-0 md:left-auto md:right-0 bottom-0 top-0 w-full md:w-1/2 flex justify-center md:justify-end items-center opacity-100 pointer-events-none z-0">
           {/* Using the uploaded chair photo */}
           <img 
-            src="/src/assets/images/arch-dining-chair-black-d575fc5ab556b8a4161a6a716397a436.jpg" 
+            src={chairImg} 
             alt="Minimalist Modern Chair" 
             className="h-[50%] sm:h-[60%] md:h-[90%] object-contain md:object-right"
             referrerPolicy="no-referrer"
@@ -170,11 +179,11 @@ export function Home({
         <div className="animate-marquee flex items-center space-x-3 sm:space-x-4 px-2 w-max">
           {[...Array(6)].map((_, arrayIndex) => (
             <React.Fragment key={arrayIndex}>
-              <img src="/src/assets/images/braai_meat_1782499481725.jpg" alt="Braai Meat" className="h-16 w-24 sm:h-20 sm:w-32 md:h-24 md:w-40 object-cover border-2 border-[#111111] rounded-md shadow-[2px_2px_0px_0px_rgba(17,17,17,1)]" referrerPolicy="no-referrer" />
-              <img src="/src/assets/images/pap_chakalaka_1782499501801.jpg" alt="Pap and Chakalaka" className="h-16 w-24 sm:h-20 sm:w-32 md:h-24 md:w-40 object-cover border-2 border-[#111111] rounded-md shadow-[2px_2px_0px_0px_rgba(17,17,17,1)]" referrerPolicy="no-referrer" />
-              <img src="/src/assets/images/mogodu_tripe_1782499516640.jpg" alt="Mogodu Tripe" className="h-16 w-24 sm:h-20 sm:w-32 md:h-24 md:w-40 object-cover border-2 border-[#111111] rounded-md shadow-[2px_2px_0px_0px_rgba(17,17,17,1)]" referrerPolicy="no-referrer" />
-              <img src="/src/assets/images/oxtail_stew_1782499528034.jpg" alt="Oxtail Stew" className="h-16 w-24 sm:h-20 sm:w-32 md:h-24 md:w-40 object-cover border-2 border-[#111111] rounded-md shadow-[2px_2px_0px_0px_rgba(17,17,17,1)]" referrerPolicy="no-referrer" />
-              <img src="/src/assets/images/buffet_traditional_food_spread_1782462290415.jpg" alt="Traditional Spread" className="h-16 w-24 sm:h-20 sm:w-32 md:h-24 md:w-40 object-cover border-2 border-[#111111] rounded-md shadow-[2px_2px_0px_0px_rgba(17,17,17,1)]" referrerPolicy="no-referrer" />
+              <img src={braaiMeatImg} alt="Braai Meat" className="h-16 w-24 sm:h-20 sm:w-32 md:h-24 md:w-40 object-cover border-2 border-[#111111] rounded-md shadow-[2px_2px_0px_0px_rgba(17,17,17,1)]" referrerPolicy="no-referrer" />
+              <img src={papChakalakaImg} alt="Pap and Chakalaka" className="h-16 w-24 sm:h-20 sm:w-32 md:h-24 md:w-40 object-cover border-2 border-[#111111] rounded-md shadow-[2px_2px_0px_0px_rgba(17,17,17,1)]" referrerPolicy="no-referrer" />
+              <img src={mogoduTripeImg} alt="Mogodu Tripe" className="h-16 w-24 sm:h-20 sm:w-32 md:h-24 md:w-40 object-cover border-2 border-[#111111] rounded-md shadow-[2px_2px_0px_0px_rgba(17,17,17,1)]" referrerPolicy="no-referrer" />
+              <img src={oxtailStewImg} alt="Oxtail Stew" className="h-16 w-24 sm:h-20 sm:w-32 md:h-24 md:w-40 object-cover border-2 border-[#111111] rounded-md shadow-[2px_2px_0px_0px_rgba(17,17,17,1)]" referrerPolicy="no-referrer" />
+              <img src={traditionalSpreadImg} alt="Traditional Spread" className="h-16 w-24 sm:h-20 sm:w-32 md:h-24 md:w-40 object-cover border-2 border-[#111111] rounded-md shadow-[2px_2px_0px_0px_rgba(17,17,17,1)]" referrerPolicy="no-referrer" />
             </React.Fragment>
           ))}
         </div>
@@ -210,7 +219,7 @@ export function Home({
               playsInline
               className="w-full h-full object-cover filter contrast-105"
             >
-              <source src="/src/assets/images/8477270-hd_1920_1080_24fps.mp4" type="video/mp4" />
+              <source src={heroVideo} type="video/mp4" />
             </video>
           </div>
           {/* Red Banner Below Photo */}
