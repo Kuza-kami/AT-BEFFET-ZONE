@@ -1,0 +1,6 @@
+{
+  "name": "At Buffet Zone",
+  "description": "Authentic traditional African buffet restaurant in Pretoria Central, South Africa, serving home-style cooked Mogodu, Beef Stew, and Dumplings. Features integrated reservations, WhatsApp ordering, and a customizable traditional catering pricing tool.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
